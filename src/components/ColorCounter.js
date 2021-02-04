@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Text, View, Button, StyleSheet } from 'react-native';
 
 const ColorCounter = ({
     color,
-    changedValue,
-    defaultValue,
     onIncrease,
     onDecrease,
 }) => {
@@ -14,23 +12,11 @@ const ColorCounter = ({
             <Text>{color}</Text>
             <Button
                 title={`More ${color}`}
-                // onPress={() => {
-                //     if (defaultValue < 255) {
-                //         changedValue(defaultValue + 5);
-                //         // changedValue(++defaultValue);
-                //     }
-                // }}
                 color='black'
                 onPress={() => onIncrease()}
             />
             <Button
                 title={`Less ${color}`}
-                // onPress={() => {
-                //     if (defaultValue > 0) {
-                //         changedValue(defaultValue - 5);
-                //         // changedValue(--defaultValue);
-                //     }
-                // }}
                 color='black'
                 onPress={() => onDecrease()}
             />
