@@ -11,6 +11,7 @@ import ComponentsScreen from './src/screens/ComponentsScreen';
 import ListScreen from './src/screens/ListScreen';
 import ImageScreen from './src/screens/ImageScreen';
 import CounterScreen from './src/screens/CounterScreen';
+import SquareScreen from './src/screens/SquareScreen';
 import ColorsScreen from './src/screens/ColorsScreen';
 
 const Stack = createStackNavigator();
@@ -45,6 +46,11 @@ const App = ({
         <Stack.Screen
           name={'colorsScreen'}
           component={ColorsScreen}
+
+        />
+        <Stack.Screen
+          name={'squareScreen'}
+          component={SquareScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>
