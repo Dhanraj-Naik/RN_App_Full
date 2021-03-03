@@ -21,6 +21,12 @@ const Animations = ({
                 }}
             />
             <Button
+                title={'Translate Animation'}
+                onPress={() => {
+                    navigation.navigate('translateAnimation');
+                }}
+            />
+            <Button
                 title={'Rotate Animation'}
                 onPress={() => {
                     navigation.navigate('rotateAnimation');
@@ -57,8 +63,8 @@ const Animations = ({
                 }}
             />
 
-            <Text>{'SOME KEY POINTS:'}</Text>
-            <Text>{' You can set useNativeDriver: true only in case of few styles like translate, scale, rotate, opacity but you can’t use native drivers for changing width and height of the components.'}</Text>
+            {/* <Text>{'SOME KEY POINTS:'}</Text> */}
+            {/* <Text>{' You can set useNativeDriver: true only in case of few styles like translate, scale, rotate, opacity but you can’t use native drivers for changing width and height of the components.'}</Text> */}
             <Button
                 title={'DropDown Animation'}
                 onPress={() => {

@@ -29,6 +29,7 @@ import HeaderScrollAnimation from './src/screens/Animations/HeaderScrollAnimatio
 import SwipableGestureAnimation from './src/screens/Animations/SwipableGestureAnimation';
 import Draggable from './src/screens/Animations/Draggable';
 import BouncingGestureAnimation from './src/screens/Animations/BouncingGestureAnimation';
+import TranslateAnimation from './src/screens/Animations/TranslateAnimation';
 
 const Stack = createStackNavigator();
 
@@ -87,6 +88,10 @@ const App = ({
         <Stack.Screen
           name={'scaleAnimation'}
           component={ScaleAnimation}
+        />
+        <Stack.Screen
+          name={'translateAnimation'}
+          component={TranslateAnimation}
         />
         <Stack.Screen
           name={'rotateAnimation'}

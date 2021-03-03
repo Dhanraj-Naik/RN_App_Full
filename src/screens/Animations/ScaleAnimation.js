@@ -45,7 +45,9 @@ const ScaleAnimation = ({
                     }],
                 },
                 ]}
-            />
+            >
+                <Text>{'THOR'}</Text>
+            </Animated.View>
         </View>
     );
 };
@@ -66,6 +68,8 @@ const styles = StyleSheet.create({
         width: 60,
         height: 60,
         backgroundColor: '#FF5A5A',
+        alignItems: 'center',
+        justifyContent: 'center',
     }
 });
 

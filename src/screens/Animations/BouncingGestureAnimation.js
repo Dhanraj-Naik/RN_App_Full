@@ -12,6 +12,7 @@ const BouncingGestureAnimation = ({
                 <Twistable>
                     <View style={styles.box} />
                 </Twistable>
+                 {/* <View style={styles.box} /> */}
             </Snappable>
         </View>
     );
