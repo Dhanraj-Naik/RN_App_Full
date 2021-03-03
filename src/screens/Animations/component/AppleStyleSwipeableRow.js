@@ -13,10 +13,11 @@ const AppleStyleSwipeableRow = ({
     };
 
 
-    const renderLeftActions = (progress, dragX) => {
+    const renderLeftActions = (progress, dragX) => { //progress, dragX
         const trans = dragX.interpolate({
             inputRange: [0, 50, 100, 101],
             outputRange: [-20, 0, 0, 1],
+            // extrapolate: 'clamp',
         });
         return (
             <TouchableOpacity style={styles.leftAction}
@@ -24,7 +25,13 @@ const AppleStyleSwipeableRow = ({
             >
                 <Animated.Text
                     style={[
-                        styles.actionText
+                        styles.actionText,
+                        {
+                            transform: [{
+                                // translateX: 0
+                                translateX: trans,
+                            }],
+                        },
                     ]}
                 >
                     Archive
@@ -34,16 +41,25 @@ const AppleStyleSwipeableRow = ({
     };
 
     const renderRightAction = (text, color, x, progress) => {
+        // console.log('renderRightAction: ', text, x, progress);
         const trans = progress.interpolate({
             inputRange: [0, 1],
             outputRange: [x, 0],
+            extrapolate: 'clamp',
         });
         const pressHandler = () => {
             close();
             alert(text);
         };
         return (
-            <Animated.View style={{ flex: 1, transform: [{ translateX: 0 }] }}>
+            <Animated.View style={{
+                flex: 1,
+                transform: [{
+                    // translateX: 0
+                    translateX: trans,
+                }],
+            }}
+            >
                 <TouchableOpacity
                     style={[styles.rightAction, { backgroundColor: color }]}
                     onPress={pressHandler}
@@ -54,13 +70,16 @@ const AppleStyleSwipeableRow = ({
         );
     };
 
-    const renderRightActions = progress => (
-        <View style={{ width: 192, flexDirection: I18nManager.isRTL ? 'row-reverse' : 'row' }}>
-            {renderRightAction('More', '#C8C7CD', 192, progress)}
-            {renderRightAction('Flag', '#ffab00', 128, progress)}
-            {renderRightAction('More', '#dd2c00', 64, progress)}
-        </View>
-    );
+    const renderRightActions = progress => {
+        console.log('renderRightActions: ', progress);
+        return ( //progress, dragX
+            <View style={{ width: 192, flexDirection: I18nManager.isRTL ? 'row-reverse' : 'row' }}>
+                {renderRightAction('More', '#C8C7CD', 192, progress)}
+                {renderRightAction('Flag', '#ffab00', 128, progress)}
+                {renderRightAction('More', '#dd2c00', 64, progress)}
+            </View>
+        );
+    }
 
     return (
         <Swipeable
@@ -69,7 +88,8 @@ const AppleStyleSwipeableRow = ({
             leftThreshold={80}
             rightThreshold={41}
             renderLeftActions={renderLeftActions}
-            renderRightActions={renderRightActions}>
+            renderRightActions={renderRightActions}
+            >
             {children}
         </Swipeable>
     );
