@@ -27,6 +27,18 @@ const Animations = ({
                 }}
             />
             <Button
+                title={'Height Translate Animation'}
+                onPress={() => {
+                    navigation.navigate('heightTranslateAnimation');
+                }}
+            />
+            <Button
+                title={'Height Translate 2 Animation'}
+                onPress={() => {
+                    navigation.navigate('heightTranslate2Animation');
+                }}
+            />
+            <Button
                 title={'Rotate Animation'}
                 onPress={() => {
                     navigation.navigate('rotateAnimation');
