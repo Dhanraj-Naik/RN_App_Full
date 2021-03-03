@@ -83,6 +83,12 @@ const Animations = ({
                     navigation.navigate('draggable');
                 }}
             />
+            <Button
+                title={'Bouncing Gesture Animation'}
+                onPress={() => {
+                    navigation.navigate('bouncingGestureAnimation');
+                }}
+            />
         </View>
     );
 };

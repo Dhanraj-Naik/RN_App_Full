@@ -28,6 +28,7 @@ import DropDownAnimation from './src/screens/Animations/DropDownAnimation';
 import HeaderScrollAnimation from './src/screens/Animations/HeaderScrollAnimation';
 import SwipableGestureAnimation from './src/screens/Animations/SwipableGestureAnimation';
 import Draggable from './src/screens/Animations/Draggable';
+import BouncingGestureAnimation from './src/screens/Animations/BouncingGestureAnimation';
 
 const Stack = createStackNavigator();
 
@@ -127,6 +128,10 @@ const App = ({
         <Stack.Screen
           name={'draggable'}
           component={Draggable}
+        />
+        <Stack.Screen
+          name={'bouncingGestureAnimation'}
+          component={BouncingGestureAnimation}
         />
       </Stack.Navigator>
     </NavigationContainer>
