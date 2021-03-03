@@ -7,10 +7,20 @@ const Snappable = (props) => {
     const dragX = useRef(new Animated.Value(0)).current;
     const dragY = useRef(new Animated.Value(0)).current;
 
+    // const transX = dragX.interpolate({
+    //     inputRange: [-100, -50, 0, 50, 100],
+    //     outputRange: [-30, -10, 0, 10, 30],
+    // });
+    // const transX = dragX.interpolate({
+    //     inputRange: [-80, -50, 0, 50, 80],
+    //     outputRange: [-30, -10, 0, 10, 30],
+    // });
     const transX = dragX.interpolate({
-        inputRange: [-100, -50, 0, 50, 100],
-        outputRange: [-30, -10, 0, 10, 30],
+        inputRange: [-1, 1],
+        outputRange: [-1, 1],
+        extrapolate: 'identity',
     });
+
     const transY = dragY.interpolate({
         inputRange: [-100, -50, 0, 50, 100],
         outputRange: [-30, -10, 0, 10, 30],
