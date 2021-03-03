@@ -15,6 +15,18 @@ import SquareScreen from './src/screens/SquareScreen';
 import ColorsScreen from './src/screens/ColorsScreen';
 import TextScreen from './src/screens/TextScreen';
 import BoxScreen from './src/screens/BoxScreen';
+import Animations from './src/screens/Animations/Animations';
+import FadeAnimation from './src/screens/Animations/FadeAnimation';
+import ScaleAnimation from './src/screens/Animations/ScaleAnimation';
+import RotateAnimation from './src/screens/Animations/RotateAnimation';
+import ColorAnimation from './src/screens/Animations/ColorAnimation';
+import SequenceAnimation from './src/screens/Animations/SequenceAnimation';
+import DelayAnimation from './src/screens/Animations/DelayAnimation';
+import ParallelAnimation from './src/screens/Animations/ParallelAnimation';
+import StaggerAnimation from './src/screens/Animations/StaggerAnimation';
+import DropDownAnimation from './src/screens/Animations/DropDownAnimation';
+import HeaderScrollAnimation from './src/screens/Animations/HeaderScrollAnimation';
+import SwipableGestureAnimation from './src/screens/Animations/SwipableGestureAnimation';
 
 const Stack = createStackNavigator();
 
@@ -61,6 +73,55 @@ const App = ({
         <Stack.Screen
           name={'boxScreen'}
           component={BoxScreen}
+        />
+        <Stack.Screen
+          name={'animations'}
+          component={Animations}
+        />
+        <Stack.Screen
+          name={'fadeAnimation'}
+          component={FadeAnimation}
+        />
+        <Stack.Screen
+          name={'scaleAnimation'}
+          component={ScaleAnimation}
+        />
+        <Stack.Screen
+          name={'rotateAnimation'}
+          component={RotateAnimation}
+        />
+        <Stack.Screen
+          name={'colorAnimation'}
+          component={ColorAnimation}
+        />
+        <Stack.Screen
+          name={'sequenceAnimation'}
+          component={SequenceAnimation}
+        />
+
+        <Stack.Screen
+          name={'delayAnimation'}
+          component={DelayAnimation}
+        />
+        <Stack.Screen
+          name={'parallelAnimation'}
+          component={ParallelAnimation}
+        />
+        <Stack.Screen
+          name={'staggerAnimation'}
+          component={StaggerAnimation}
+        />
+        <Stack.Screen
+          name={'dropDownAnimation'}
+          component={DropDownAnimation}
+        />
+        <Stack.Screen
+          name={'headerScrollAnimation'}
+          component={HeaderScrollAnimation}
+        />
+        <Stack.Screen
+          name={'swipableGestureAnimation'}
+          component={SwipableGestureAnimation}
         />
       </Stack.Navigator>
     </NavigationContainer>
