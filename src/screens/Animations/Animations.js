@@ -77,6 +77,12 @@ const Animations = ({
                     navigation.navigate('swipableGestureAnimation');
                 }}
             />
+            <Button
+                title={'Pan Gesture Animation'}
+                onPress={() => {
+                    navigation.navigate('draggable');
+                }}
+            />
         </View>
     );
 };

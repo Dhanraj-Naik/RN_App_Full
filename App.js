@@ -27,6 +27,7 @@ import StaggerAnimation from './src/screens/Animations/StaggerAnimation';
 import DropDownAnimation from './src/screens/Animations/DropDownAnimation';
 import HeaderScrollAnimation from './src/screens/Animations/HeaderScrollAnimation';
 import SwipableGestureAnimation from './src/screens/Animations/SwipableGestureAnimation';
+import Draggable from './src/screens/Animations/Draggable';
 
 const Stack = createStackNavigator();
 
@@ -122,6 +123,10 @@ const App = ({
         <Stack.Screen
           name={'swipableGestureAnimation'}
           component={SwipableGestureAnimation}
+        />
+        <Stack.Screen
+          name={'draggable'}
+          component={Draggable}
         />
       </Stack.Navigator>
     </NavigationContainer>
