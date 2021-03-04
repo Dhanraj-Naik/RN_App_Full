@@ -57,6 +57,12 @@ const Animations = ({
                 }}
             />
             <Button
+                title={'Loop Animation'}
+                onPress={() => {
+                    navigation.navigate('loopAnimation');
+                }}
+            />
+            <Button
                 title={'Color Animation'}
                 onPress={() => {
                     navigation.navigate('colorAnimation');
