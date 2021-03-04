@@ -63,6 +63,12 @@ const Animations = ({
                 }}
             />
             <Button
+                title={'Animated Event Animation'}
+                onPress={() => {
+                    navigation.navigate('animatedEvent');
+                }}
+            />
+            <Button
                 title={'Color Animation'}
                 onPress={() => {
                     navigation.navigate('colorAnimation');

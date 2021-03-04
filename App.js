@@ -35,6 +35,7 @@ import HeightTranslate2Animation from './src/screens/Animations/HeightTranslate2
 import PercentageAnimation from './src/screens/Animations/PercentageAnimation';
 import SpringAnimation from './src/screens/Animations/SpringAnimation';
 import LoopAnimation from './src/screens/Animations/LoopAnimation';
+import AnimatedEvent from './src/screens/Animations/AnimatedEvent';
 
 const Stack = createStackNavigator();
 
@@ -121,6 +122,10 @@ const App = ({
         <Stack.Screen
           name={'loopAnimation'}
           component={LoopAnimation}
+        />
+        <Stack.Screen
+          name={'animatedEvent'}
+          component={AnimatedEvent}
         />
         <Stack.Screen
           name={'colorAnimation'}
