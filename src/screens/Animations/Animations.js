@@ -39,6 +39,12 @@ const Animations = ({
                 }}
             />
             <Button
+                title={'Height Percentage  Animation'}
+                onPress={() => {
+                    navigation.navigate('percentageAnimation');
+                }}
+            />
+            <Button
                 title={'Rotate Animation'}
                 onPress={() => {
                     navigation.navigate('rotateAnimation');

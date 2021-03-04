@@ -32,6 +32,7 @@ import BouncingGestureAnimation from './src/screens/Animations/BouncingGestureAn
 import TranslateAnimation from './src/screens/Animations/TranslateAnimation';
 import HeightTranslateAnimation from './src/screens/Animations/HeightTranslateAnimation';
 import HeightTranslate2Animation from './src/screens/Animations/HeightTranslate2Animation';
+import PercentageAnimation from './src/screens/Animations/PercentageAnimation';
 
 const Stack = createStackNavigator();
 
@@ -102,6 +103,10 @@ const App = ({
         <Stack.Screen
           name={'heightTranslate2Animation'}
           component={HeightTranslate2Animation}
+        />
+        <Stack.Screen
+          name={'percentageAnimation'}
+          component={PercentageAnimation}
         />
         <Stack.Screen
           name={'rotateAnimation'}
