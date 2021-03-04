@@ -51,6 +51,12 @@ const Animations = ({
                 }}
             />
             <Button
+                title={'Spring Animation'}
+                onPress={() => {
+                    navigation.navigate('springAnimation');
+                }}
+            />
+            <Button
                 title={'Color Animation'}
                 onPress={() => {
                     navigation.navigate('colorAnimation');
